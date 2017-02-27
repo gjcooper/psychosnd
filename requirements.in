@@ -1,0 +1,6 @@
+# requirements.in
+numpy
+scipy
+matplotlib
+
+prespy
