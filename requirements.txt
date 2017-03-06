@@ -4,11 +4,12 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-cycler==0.10.0            # via matplotlib
+cycler==0.10.0            # via matplotlib, prespy
 matplotlib==2.0.0
 numpy==1.12.0
-pyparsing==2.1.10         # via matplotlib
-python-dateutil==2.6.0    # via matplotlib
-pytz==2016.10             # via matplotlib
+prespy==0.0.4
+pyparsing==2.1.10         # via matplotlib, prespy
+python-dateutil==2.6.0    # via matplotlib, prespy
+pytz==2016.10             # via matplotlib, prespy
 scipy==0.18.1
-six==1.10.0               # via cycler, matplotlib, python-dateutil
+six==1.10.0               # via cycler, matplotlib, prespy, python-dateutil
