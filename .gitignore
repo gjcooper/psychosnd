@@ -3,6 +3,7 @@
 *.pyc
 *.swp
 dist/
-prespy.egg-info/
+*.egg-info/
 venv/
 build/
+data

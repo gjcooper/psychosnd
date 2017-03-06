@@ -18,7 +18,7 @@ try:
     output = output.stdout
 except AttributeError:
     try:
-        output = subprocess.check_output(pandoc_call)
+        output = subprocess.check_output(pandoc_call, universal_newlines=True)
     except subprocess.CalledProcessError:
         sys.exit()
 
