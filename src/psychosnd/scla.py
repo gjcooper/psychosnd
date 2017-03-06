@@ -13,6 +13,7 @@ def scla(soundfile=None, logfile=None, **kwargs):
         raise ExtractError(log.events, pcodes, snds)
 
     datasets = {}
+    datasets['Port Snd Diffs'] = []
     for code, snd in zip(pcodes, snds):
         datasets['Port Snd Diffs'].append(snd - code)
     td, pl = timing(port, pcodes, snds, fs, **kwargs)
