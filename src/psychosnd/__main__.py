@@ -1,4 +1,4 @@
-from psychosnd import scla
+from psychosnd.scla import scla, ExtractError
 import sys
 import argparse
 
@@ -13,7 +13,12 @@ def scla_script():
 
     args = parser.parse_args()
 
-    res = sndan.scla(**vars(args))
+    try:
+        res = scla(**vars(args))
+    except ExtractError as e:
+        lengths = map(len, [e.logData, e.portData, e.sndData])
+        print('{}\nLogEvts: {} PortEvts: {} SndEvts: {}'.format(e.message, *lengths))
+        sys.exit(65)
     report = ['==================================']
     for result in res:
         report.append(result)
