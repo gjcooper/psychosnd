@@ -3,6 +3,8 @@ from __future__ import division
 from prespy.scla.sndan import extract_sound_events, ExtractError, timing, stdStats
 from .psychcsv import load
 
+datasets = {'Port_to_Snd': [], 'Port_to_Port': None, 'Snd_to_Snd': None, 'Port_Length': None}
+
 
 def scla(soundfile=None, logfile=None, **kwargs):
     """Implements similar logic to Neurobehavioural Systems SCLA program"""
@@ -12,13 +14,11 @@ def scla(soundfile=None, logfile=None, **kwargs):
     if (len(log.events) != len(pcodes)) or (len(pcodes) != len(snds)):
         raise ExtractError(log.events, pcodes, snds)
 
-    datasets = {}
-    datasets['Port Snd Diffs'] = []
     for code, snd in zip(pcodes, snds):
-        datasets['Port Snd Diffs'].append(snd - code)
+        datasets['Port_to_Snd'].append(snd - code)
     td, pl = timing(port, pcodes, snds, fs, **kwargs)
-    datasets['Port Time Diffs'] = td['pcodes']
-    datasets['Snd Time Diffs'] = td['snds']
-    datasets['Port Code Lengths'] = pl
+    datasets['Port_to_Port'] = td['pcodes']
+    datasets['Snd_to_Snd'] = td['snds']
+    datasets['Port_Length'] = pl
 #    import pdb; pdb.set_trace()
     return stdStats(datasets)

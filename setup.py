@@ -57,6 +57,6 @@ setup(
     dependency_links=dependency_links,
     author_email=about['__email__'],
     entry_points={
-        'console_scripts': ['scla=psychosnd.__main__:scla_script'],
+        'console_scripts': ['psych-scla=psychosnd.__main__:scla_script'],
     }
 )
