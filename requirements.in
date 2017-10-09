@@ -3,4 +3,4 @@ numpy
 scipy
 matplotlib
 
-prespy>=0.0.6
+prespy>=0.0.11
