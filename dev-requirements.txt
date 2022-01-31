@@ -42,7 +42,7 @@ pip-tools==1.8.0
     # via -r dev-requirements.in
 pkginfo==1.4.1
     # via twine
-pygments==2.2.0
+pygments==2.7.4
     # via grip
 requests-toolbelt==0.7.1
     # via twine
