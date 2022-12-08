@@ -6,7 +6,7 @@
 #
 args==0.1.0
     # via clint
-certifi==2019.11.28
+certifi==2022.12.7
     # via requests
 chardet==3.0.4
     # via requests
@@ -44,13 +44,13 @@ pkginfo==1.4.1
     # via twine
 pygments==2.7.4
     # via grip
-requests-toolbelt==0.7.1
-    # via twine
 requests==2.20.0
     # via
     #   grip
     #   requests-toolbelt
     #   twine
+requests-toolbelt==0.7.1
+    # via twine
 six==1.10.0
     # via pip-tools
 twine==1.8.1
