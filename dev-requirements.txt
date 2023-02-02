@@ -44,20 +44,20 @@ pkginfo==1.4.1
     # via twine
 pygments==2.7.4
     # via grip
-requests-toolbelt==0.7.1
-    # via twine
 requests==2.20.0
     # via
     #   grip
     #   requests-toolbelt
     #   twine
+requests-toolbelt==0.7.1
+    # via twine
 six==1.10.0
     # via pip-tools
 twine==1.8.1
     # via -r dev-requirements.in
 urllib3==1.24.3
     # via requests
-werkzeug==0.15.3
+werkzeug==0.15.5
     # via flask
 wheel==0.29.0
     # via -r dev-requirements.in
