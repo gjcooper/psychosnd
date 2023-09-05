@@ -1,0 +1,8 @@
+venm 3.x psychosnd
+pip install pip-tools
+pip-compile requirements.txt
+pip-compile dev-requirements.in
+pip install -r dev-requirements.txt
+pip install -U twine
+pip wheel . -w dist
+twine upload dist/psychosnd-0.0.9*
