@@ -1,6 +1,0 @@
-pip-tools
-grip
-coverage
-setuptools
-wheel
-twine
