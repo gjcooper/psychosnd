@@ -39,5 +39,6 @@ packages = ["src/psychosnd"]
 [dependency-groups]
 dev = [
     "coverage",
+    "pytest",
     "twine",
 ]
