@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "psychosnd"
-version = "0.0.12"
+version = "0.0.13"
 description = "Psychopy sound analysis and generation scripts"
 readme = "README.md"
 license = { text = "GPLv3" }
